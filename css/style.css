@@ -173,11 +173,19 @@ img{
     position: fixed;
     top: 0;
     left: 0;
-    height: 7rem;
+    height: 9rem;
     width: 100%;
     background-color: var(--white-color);
     z-index: var(--z-fixed);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.header .logo-content img {
+    width: 30%; 
+    height: 30%; 
+    max-height: auto;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 /* nav */
