@@ -252,6 +252,11 @@ img{
     .contact-content{
         display: none;
     }
+    .header .coffeelogo {
+        left: 10px;  /* Adjust the left position for smaller screens */
+        height: 40px; /* Reduce the height of the logo */
+        width: 80px;  /* Reduce the width of the logo */
+    }
     .navClose-btn,
     .navOpen-btn,
     .media-icons{
