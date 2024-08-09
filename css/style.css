@@ -18,6 +18,7 @@ html{
 --normal-font: 1.6rem;
 --small-font: 1.4rem;
 --smaller-font: 1.3rem;
+--large-font: 2.0rem;
 
 /* Font Weight ***/
 --font-regular: 400;
@@ -173,7 +174,7 @@ img{
     position: fixed;
     top: 0;
     left: 0;
-    height: 9rem;
+    height: 8rem;
     width: 100%;
     background-color: var(--white-color);
     z-index: var(--z-fixed);
@@ -193,41 +194,37 @@ img{
     justify-content: center;
     justify-content: space-between;
 }
-.nav-link,
-.phone-icon,
-.phone-number{
+.nav-link{
     color: var(--black-color) ;
 }
-.header-active .nav-link,
-.header-active .phone-icon,
-.header-active .phone-number{
+.header-active .nav-link{
     color: var(--text-color);
 }
-.logo-icon,
-.phone-icon{
-    font-size: 2rem;
-}
+
 .menu-list{
-    column-gap: 2rem;
+    column-gap: 4rem;
+    
 }
 .nav-link{
     position: relative;
     text-transform: capitalize;
+    font-size: var(--large-font);
 }
 .nav-link::before{
     content: '';
     position: absolute;
-    left: 50%;
-    bottom: -8px;
-    height: 6px;
-    width: 6px;
-    border-radius: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
     background-color: var(--black-color);
-    opacity: 0;
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
 }
 .active-navlink::before{
-    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: left;
 }
 .header-active .active-navlink::before{
     background-color: var(--text-color);
@@ -251,8 +248,8 @@ img{
     }
     .header .coffeelogo {
         left: 10px;  /* Adjust the left position for smaller screens */
-        height: 40px; /* Reduce the height of the logo */
-        width: 80px;  /* Reduce the width of the logo */
+        height: 100px; /* Reduce the height of the logo */
+        width: 150px;  /* Reduce the width of the logo */
     }
     .navClose-btn,
     .navOpen-btn,
@@ -294,15 +291,26 @@ img{
         position: absolute;
         top: 2rem;
         right: 2rem;
-        font-size: 2.5rem;
+        font-size: 3.4rem;
         cursor: pointer;
     }
     .navOpen-btn{
-        font-size: 2rem;
+        font-size: 3.4rem;
         cursor: pointer;
         color: var(--black-color);
     }
     .header-active .navOpen-btn{
         color: var(--text-color);
     }
+}
+
+/* HOME */
+.home{
+    height: 100vh;
+    width: 100%;
+}
+.home-img{
+    height: 100%;
+    width: 100%;
+    filter: brightness(50%);
 }
