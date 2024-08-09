@@ -15,7 +15,7 @@
      <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!-- HEADER -->
+<!-- Header Section -->
         <header class="header">
             <nav class="nav container flex">
                 <a href="#" class="logo-content flex">
@@ -48,30 +48,31 @@
 <!-- Home Section -->
         <main>
             <section class="home" id="home">
-                <div class="home-content">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="images/HomeImg1.jpeg" alt="" class="home-img">
-                            </div>
-    
-                            <div class="swiper-slide">
-                                <img src="images/HomeImg2.jpeg" alt="" class="home-img">
-                            </div>
-    
-                        </div>
-                        <div class="swiper-button-next swiper-navBtn"></div>
-                        <div class="swiper-button-prev swiper-navBtn"></div>
-                        <div class="swiper-pagination"></div>
+                <img class="img-slide active" src="images/HomeImg1.jpeg">
+                <img class="img-slide" src="images/HomeImg2.jpeg">
+
+                <div class="home-detail">
+                    <div class="home-text">
+                        <h2 class="homeTitle">Coffee| Community | Culture</h2>
+                        <h4 class="subTitle">Proudly serving single estate coffees from Beacon Coffee Company</h4>
                     </div>
                 </div>
+
+                <div class="home-detail">
+                    <div class="home-text">
+                        <h2 class="homeTitle">Open Every Day</h2>
+                        <h2 class="homeTitle">Sunday - Friday </h2>
+                        <h4 class="subTitle">7 am - 3pm </h4>
+                        <h2 class="homeTitle">Saturday</h2>
+                        <h4 class="subTitle">7 am - 3pm </h4>
+                    </div>
+                </div>
+
             </section>
         </main>
 
 <!-- SCRIPT JS  -->
     <script src="js/script.js"></script>
 
-<!-- SWIPER JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>
