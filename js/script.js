@@ -26,7 +26,7 @@ const navButtons = document.querySelectorAll('.slider-navigation .nav-btn');
 
 let currentIndex = 0;
 const totalSlides = slides.length;
-const slideInterval = 5000; // interval time in milliseconds (5 seconds)
+const slideInterval = 6000; // interval time in milliseconds (5 seconds)
 
 function showSlide(index){
 
