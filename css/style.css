@@ -36,6 +36,7 @@ html{
 --white-color: #FFF;
 --black-color: #000;
 --section-bg: #2C3034;
+--gray: rgba(255,255,255,0.5);
 
 /* z-index */
 --z-overlay: 10;
@@ -310,7 +311,7 @@ img{
     width: 100%;
     position: relative;
 }
-.home .img{
+.home .img-slide{
     height: 95%;
     width: 100%;
     filter: brightness(50%);
@@ -321,12 +322,12 @@ img{
     position: absolute;
     display: none;
 }
-.home .img.active{
+.home .img-slide.active{
     display: block;
 }
 .home .content{
     z-index: 1;
-    color: #fff;
+    color: var(--white-color);
     width: 70%;
     position: absolute;
     top: 50%;
@@ -374,11 +375,11 @@ img{
 .slider-navigation .nav-btn{
     width: 12px;
     height: 12px;
-    background: #fff;
+    background: var(--white-color);
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 0 2px rgba(255,255,255,0.5);
-    transition: 0.3s ease;
+    box-shadow: 0 0 2px var(--gray);
+    transition: var(--tran-0-3) ease;
 }
 .slider-navigation .nav-btn.active{
     background: var(--primary-color);

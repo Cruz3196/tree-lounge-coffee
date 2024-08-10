@@ -17,3 +17,32 @@ if(navMenu && navCloseBtn){
         body.style.overflowY = "scroll"; 
     })
 }
+
+// Slider Navigation 
+
+const slides = document.querySelectorAll('.home .img-slide');
+const contents = document.querySelectorAll('.home .content');
+const navButtons = document.querySelectorAll('.slider-navigation .nav-btn');
+
+let currentIndex = 0;
+
+function showSlide(index){
+
+    slides.forEach((slide) => slide.classList.remove('active'));
+    contents.forEach((content) => content.classList.remove('active'));
+
+    slides[index].classList.add('active');
+    contents[index].classList.add('active');
+
+    navButtons.forEach((btn, i) => btn.classList.remove('active'));
+    navButtons[index].classList.add('active');
+}
+
+navButtons.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+        currentIndex = index;
+        showSlide(currentIndex);
+    });
+});
+
+showSlide(currentIndex); 
