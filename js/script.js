@@ -25,6 +25,8 @@ const contents = document.querySelectorAll('.home .content');
 const navButtons = document.querySelectorAll('.slider-navigation .nav-btn');
 
 let currentIndex = 0;
+const totalSlides = slides.length;
+const slideInterval = 5000; // interval time in milliseconds (5 seconds)
 
 function showSlide(index){
 
@@ -38,6 +40,12 @@ function showSlide(index){
     navButtons[index].classList.add('active');
 }
 
+// function to show the next slide
+function showNextSlide(){
+    currentIndex = (currentIndex + 1) % totalSlides
+    showSlide(currentIndex);
+}
+
 navButtons.forEach((btn, index) => {
     btn.addEventListener('click', () => {
         currentIndex = index;
@@ -46,3 +54,6 @@ navButtons.forEach((btn, index) => {
 });
 
 showSlide(currentIndex); 
+
+//automatically move to the next slide at the defined interval 
+setInterval(showNextSlide,slideInterval);

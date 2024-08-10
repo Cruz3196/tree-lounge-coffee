@@ -40,7 +40,7 @@ html{
 
 /* z-index */
 --z-overlay: 10;
---z-fixed: 100;
+--z-fixed: 1000;
 /* z index only applies to positioned elements*/
 
 /* transition */
@@ -210,6 +210,7 @@ img{
     text-transform: uppercase;
     font-size: var(--normal-font);
     color: var(--black-color);
+    display: inline-block;
 }
 .nav-link::before{
     content: '';
@@ -217,19 +218,18 @@ img{
     left: 0;
     bottom: 0;
     height: 2px;
-    width: 100%;
-    transform: scaleX(0);
+    width: 0;
     background-color: var(--black-color);
-    transform-origin: right;
     transition: transform 0.3s ease-in-out;
 }
-.active-navlink::before{
-    transform: scaleX(1);
-    transform-origin: left;
+.nav-link:hover::before {
+    width: 100%;
+    background-color: var(--text-color); 
 }
 .header-active .active-navlink::before{
     background-color: var(--text-color);
 }
+
 .media-icons{
     column-gap: 1rem;
 }
@@ -248,9 +248,9 @@ img{
         display: none;
     }
     .header .coffeelogo {
-        left: 10px;  /* Adjust the left position for smaller screens */
-        height: 100px; /* Reduce the height of the logo */
-        width: 150px;  /* Reduce the width of the logo */
+        left: 10px; 
+        height: 100px; 
+        width: 150px;  
     }
     .navClose-btn,
     .navOpen-btn,
