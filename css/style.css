@@ -16,6 +16,7 @@ html{
 --h2-font: 2.4rem;
 --h3-font: 2rem;
 --h4-font: 1.8rem;
+--p-font: 1em; 
 --normal-font: 1.6rem;
 --small-font: 1.4rem;
 --smaller-font: 1.3rem;
@@ -329,7 +330,9 @@ img{
 .home .content{
     z-index: 1;
     color: var(--white-color);
-    width: 70%;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -349,20 +352,89 @@ img{
     text-transform: uppercase;
     line-height: 75px;
     margin-bottom: 60px;
+    position: relative;
 }
 .home .content h1::after{
     content: '';
     position: absolute;
-    margin-top: 90px;
+    bottom: -50px;
     left: 50%;
     transform: translateX(-50%);
-    width: 400px; 
+    width: 100%;
+    max-width: 400px; 
     height: 4px; 
     background-color: var(--primary-color);
 }
 
 .home .content p{
+    font-size: var(--p-font);
     margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    max-width: 80%;
+}
+
+/* Home Responsive*/
+@media (max-width: 1200px) {
+    .home .content h1 {
+        font-size: 2.2em;
+        margin-bottom: 50px;
+        line-height: 60px;
+    }
+    .home .content h1::after{
+        bottom: -45px;
+        width: 70%;
+    }
+    .home .content p{
+        margin-top: 90px;
+    }
+}
+
+@media (max-width: 992px) {
+    .home .content h1 {
+        font-size: 2em;
+        margin-bottom: 40px;
+        line-height: 55px;
+    }
+    .home .content h1::after{
+        bottom: -40px;
+        width: 65%;
+    }
+    .home .content p{
+        margin-top: 95px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home .content h1 {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+        line-height: 50px;
+        max-width: 95%;
+    }
+    .home .content h1::after{
+        bottom: -35px;
+        width: 60%;
+    }
+    .home .content p{
+        margin-top: 90px;
+    }
+}
+
+@media (max-width: 576px) {
+    .home .content h1 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        line-height: 45px;
+    }
+    .home .content h1::after{
+        bottom: -30px;
+        width: 55%;
+    }
+    .home .content p{
+        margin-top: 85px;
+    }
 }
 
 /* Slider Navigation*/
@@ -375,7 +447,7 @@ img{
     align-items: center;
     transform: translateY(-50px);
     bottom: 20px;
-    left: 50%;
+    left: 48.5%;
 }
 .slider-navigation .nav-btn{
     width: 12px;
