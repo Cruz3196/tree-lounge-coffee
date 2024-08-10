@@ -314,7 +314,7 @@ img{
     position: relative;
 }
 .home .img-slide{
-    height: 95%;
+    height: 100%;
     width: 100%;
     filter: brightness(50%);
     z-index: 0;
@@ -445,9 +445,9 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateY(-50px);
+    transform: translateX(-50%) translateY(-50px);;
     bottom: 20px;
-    left: 48.5%;
+    left: 50%;
 }
 .slider-navigation .nav-btn{
     width: 12px;
@@ -467,3 +467,5 @@ img{
 .slider-navigation .nav-btn:hover{
     transform: scale(1.2);
 }
+
+/* Slider Responsive */

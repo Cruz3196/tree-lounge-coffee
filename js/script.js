@@ -1,4 +1,4 @@
-// NavBar Open Close 
+//----------  NavBar Open Close -------------------
 const body = document.querySelector('body'),
     navMenu = body.querySelector('.menu-content'),
     navOpenBtn = body.querySelector('.navOpen-btn'),
@@ -18,7 +18,7 @@ if(navMenu && navCloseBtn){
     })
 }
 
-// Slider Navigation 
+//---------- Slider Navigation -------------------
 
 const slides = document.querySelectorAll('.home .img-slide');
 const contents = document.querySelectorAll('.home .content');
