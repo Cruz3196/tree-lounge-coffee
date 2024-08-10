@@ -3,7 +3,8 @@
 
 html{
     font-size: 62.5%; 
-    scroll-behavior: smooth; ;
+    scroll-behavior: smooth;
+    background-color: var(--primary-color);
 }
 
 :root{
@@ -23,6 +24,7 @@ html{
 /* Font Weight ***/
 --font-regular: 400;
 --font-medium: 500;
+--font-large: 900; 
 --font-semi-bold: 600;
 
 /* Color Variables */
@@ -205,7 +207,7 @@ img{
 .nav-link{
     position: relative;
     text-transform: uppercase;
-    font-size: var(--large-font);
+    font-size: var(--normal-font);
     color: var(--black-color);
 }
 .nav-link::before{
@@ -307,8 +309,52 @@ img{
     height: 100vh;
     width: 100%;
 }
-.img-slide{
-    height: 100%;
+.home .img{
+    height: 95%;
     width: 100%;
     filter: brightness(50%);
+    z-index: 0;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    display: none;
+}
+.home .img.active{
+    display: block;
+}
+.home .content{
+    z-index: 1;
+    color: #fff;
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    display: none;
+}
+.home .content.active{
+    display: block;
+}
+.home .content h1{
+    font-size: 2.5em;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 75px;
+    margin-bottom: 60px;
+}
+.home .content h1::after{
+    content: '';
+    position: absolute;
+    margin-top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px; 
+    height: 4px; 
+    background-color: var(--primary-color);
+    
 }
