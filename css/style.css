@@ -662,6 +662,63 @@ img {
     .card-5 { grid-row: 5 / 6 !important; }
 }
 
+/* Newsletter Section */
+
+.newsletter .logo-icon
+.newsletter .logo-text,
+.newsletter .section-description{
+    color: var(--text-color);
+}
+.newsletter-container{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 4rem;
+}
+.newsletter .logo-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.newsletter .logo-icon{
+    font-size: 3rem;
+    color: var(--text-color-light);
+}
+.newsletter .logo-text{
+    color: var(--text-color-light);
+    font-size: 2rem;
+    font-weight: var(--font-medium);
+}
+.newsletter-inputBox{
+    position: relative;
+    height: 5rem;
+    max-width: 400px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+.newletter-input{
+    height: 100%;
+    width: 100%;
+    border-radius: 3rem;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    padding: 0 16rem 0 2rem;
+    box-sizing: border-box;
+}
+.newsletter-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 3rem 3rem 0;
+}
+.newsletter .media-icons{
+    display: flex;
+    justify-content: center;
+}
+
 /* Footer Section */
 
 .footer{
