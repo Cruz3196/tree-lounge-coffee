@@ -699,6 +699,7 @@ img {
     display: flex;
     justify-content: center;
     margin: 0 auto;
+    margin-bottom: 30px;
 }
 .newletter-input{
     height: 100%;
