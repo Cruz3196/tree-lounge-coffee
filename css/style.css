@@ -501,6 +501,7 @@ img {
     font-weight: 900;
     text-transform: uppercase;
     margin-bottom: 1rem;
+    color: #000;
 }
 .about .section-subtitle::after{
     content: '';
