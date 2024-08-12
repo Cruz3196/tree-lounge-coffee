@@ -681,14 +681,9 @@ img {
     justify-content: center;
     align-items: center;
 }
-.newsletter .logo-icon{
-    font-size: 3rem;
-    color: var(--text-color-light);
-}
-.newsletter .logo-text{
-    color: var(--text-color-light);
-    font-size: 2rem;
-    font-weight: var(--font-medium);
+.newsletter .coffeelogo2 {
+    width: 400px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
 }
 .newsletter-inputBox{
     position: relative;
